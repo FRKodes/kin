@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+
+$naranja: #f3a054
+$gris: #e7e8e9
+
+.naranja
+	color: #f3a054
+.blanco
+	color: #fff
+.mayus
+	text-transformation: uppercase
+.font-8
+	font-size: .8em
+.font-9
+	font-size: .9em
+.opensans
+	font-family: 'Open Sans', sans-serif
+.lalezar
+	font-family: 'Lalezar', cursive
+.m-top-30
+	margin-top: 30px
+.m-top-60
+	margin-top: 60px
+.m-bottom-60
+	margin-bottom: 60px
+.img-100
+	width: 100%
+	height: auto
+	display: block
+.fixed-top
+	position: fixed
+	width: 100%
+	z-index: 1000
+body
+	font-family: 'Open Sans', sans-serif
+.navbar-laravel
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04)
+.navbar-toggler
+	width: 40px
+	padding: 4px
+	&:hover
+		outline: none
+	span.navbar-toggler-bar
+		background: $naranja
+		height: 3px
+		margin: 4px 0
+		display: block
+		width: 100%
+.navbar.bg-dark
+	background-color: black !important
+
+.navbar-brand
+	width: 50px
+	height: auto
+	display: block
+
+.main-banner
+	background-color: black
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 400px
+	width: 100%
+	img
+		width: 240px
+		height: auto
+		display: block
+.main-info-container
+	padding: 30px 0
+	.slick-dots
+		padding: 0
+		margin: 0
+		text-align: center
+		li
+			display: inline-block
+			background: $gris
+			width: 10px
+			height: 10px
+			margin: 0 5px
+			border-radius: 50%
+			overflow: hidden
+			button
+				background: none
+				color: transparent
+			&.slick-active
+				background: $naranja
+	.image-container
+		img
+			width: 100%
+			height: auto
+			display: block
+
+h2.title
+	color: $naranja
+	font-family: 'Lalezar', cursive
+	text-align: center
+	padding-top: 20px
+h3
+	font-size: 1.2em
+.back-print
+	background: url(/images/bg-kin-productos.png) no-repeat center center
+	background-size: cover
+	padding-top: 20px
+	padding-bottom: 50px
+
+.slick-arrow
+	width: 40px
+	height: 40px
+	position: absolute
+	z-index: 9
+	border: none
+	background: transparent url(/images/arrow.svg) no-repeat center center
+	top: 40%
+.slick-prev
+	background-size: 40px
+	left: 0
+	transform: rotate(180deg)
+.slick-next
+	background-size: 40px
+	right: 0
+.products-container
+	.slick-dots
+		padding: 0
+		margin: 0
+		text-align: center
+		li
+			display: inline-block
+	.item
+		display: flex !important
+		justify-content: center
+		align-items: center
+		img
+			width: 75%
+			height: auto
+			display: inline-block
+.colection-container
+	height: 400px
+	width: 100%
+	display: block
+	&.sanmiguel
+		background: url(/images/banners-kin-coleccion-sanmiguel.png) no-repeat center center
+		background-size: cover
+	&.tulum
+		background: url(/images/banners-kin-coleccion-tulum.png) no-repeat center center
+		background-size: cover
+	&.xo
+		background: url(/images/banners-kin-coleccion-xo.png) no-repeat center center
+		background-size: cover
+footer
+	background: black
+	padding: 30px 0
+.form-control
+	border-radius: 0
+	border: none
+.kin-btn
+	background: $naranja
+	border-radius: 0
+	border: none
+	display: inline-block
+ul.shop
+	padding: 0
+	margin: 0
+	text-align: center
+	li
+		display: inline-block
+		margin: 0 10px
+		img
+			height: 20px
+			width: auto
+			display: block
+
+ul.social
+	padding: 0
+	margin: 20px 0
+	text-align: center
+	li
+		display: inline-block
+		margin: 0 15px
+		img
+			height: 25px
+			width: auto
+			display: block
