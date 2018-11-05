@@ -9,7 +9,10 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.2.0"
+        "laravelcollective/html": "^5.2.0",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/message": "^1.7",
+        "vinkla/instagram": "^8.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

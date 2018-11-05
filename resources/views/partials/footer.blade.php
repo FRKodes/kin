@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-sm-12">
+		<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 ml-auto mr-auto">
 			<h2 class="title text-center">CONTACTO</h2>
 
 			{!! Form::open(['url' => 'foo/bar']) !!}
@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 m-top-60">
+		<div class="col-xs-12 col-sm-12 m-top-60 m-bottom-60">
 			<h3 class="mayus naranja text-center">Encuentra nuestros productos en:</h3>
 			<ul class="shop">
 				<li><a target="_blank" href=""><img src="{{ url('images/etsy.svg') }}" alt="Encuentra productos KIN en Etsy"></a></li>
@@ -37,6 +37,16 @@
 				<li><a target="_blank" href="https://listado.mercadolibre.com.mx/_CustId_312980885"><img src="{{ url('images/mercadolibre.svg') }}" alt="Encuentra productos KIN en Mercado Libre"></a></li>
 			</ul>
 		</div>
+	</div>
+
+	<div class="row">
+		
+		@foreach($imgs as $key => $image)
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ig-item">
+				<img class="img-100" src="{{ $image->images->standard_resolution->url }}" alt="">
+			</div>
+		@endforeach
+
 	</div>
 
 	<div class="row">

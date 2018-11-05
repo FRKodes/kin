@@ -62,11 +62,13 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-12 m-top-30 text-center">
 				<h2 class="title">COLECCIONES</h2>
-				<select name="" id="">
-					<option value="">Uno</option>
-					<option value="">Dos</option>
-					<option value="">Tres</option>
-				</select>
+				<div class="selector-container">
+					<select name="collection-selector" id="collection-selector">
+						<option value="san-miguel">San Miguel</option>
+						<option value="tulum">Tulum</option>
+						<option value="xo">XO</option>
+					</select>
+				</div>
 				<div class="colection-container sanmiguel"></div>
 			</div>
 		</div>
