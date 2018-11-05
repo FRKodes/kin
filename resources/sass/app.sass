@@ -25,14 +25,23 @@ $gris: #e7e8e9
 	margin-top: 60px
 .m-bottom-60
 	margin-bottom: 60px
+.m-bottom-40
+	margin-bottom: 40px
 .img-100
 	width: 100%
 	height: auto
 	display: block
+.hidden
+	display: none
 .fixed-top
 	position: fixed
 	width: 100%
 	z-index: 1000
+	opacity: 0
+	transition: opacity .5s ease
+	&.transparent
+		opacity: 1
+		transition: opacity .5s ease
 body
 	font-family: 'Open Sans', sans-serif
 .navbar-laravel
@@ -51,7 +60,8 @@ body
 		width: 100%
 .navbar.bg-dark
 	background-color: black !important
-
+.navbar-nav
+	text-align: center
 .navbar-brand
 	width: 50px
 	height: auto
@@ -146,22 +156,42 @@ h3
 	&.tulum
 		background: url(/images/banners-kin-coleccion-tulum.png) no-repeat center center
 		background-size: cover
+		display: none
 	&.xo
 		background: url(/images/banners-kin-coleccion-xo.png) no-repeat center center
 		background-size: cover
+		display: none
 .selector-container
 	margin: 20px 0
 footer
 	background: black
 	padding: 30px 0
+#contactForm
+	position: relative
+.form-group.error
+	.form-control
+		border: 1px solid red
+		background: rgba(red, .2)
 .form-control
 	border-radius: 0
 	border: none
+textarea
+	resize: none
+.sent_mail_alert
+	background: rgba($naranja, .95)
+	color: white
+	text-align: center
+	padding: 20px 20px
+	position: absolute
+	top: 200px
+	display: none
 .kin-btn
 	background: $naranja
 	border-radius: 0
 	border: none
 	display: inline-block
+	&:hover
+		background: darken($naranja, 5%)
 ul.shop
 	padding: 0
 	margin: 0
@@ -196,6 +226,9 @@ ul.social
 	.ig-item
 		height: 240px
 @media screen and (min-width: 768px)
+	.ig-item
+		height: 150px
+@media screen and (min-width: 992px)
 	.ig-item
 		height: 210px
 @media screen and (min-width: 1200px)

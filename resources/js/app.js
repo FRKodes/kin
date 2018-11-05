@@ -51,6 +51,66 @@ $('.products-container').slick({
 	]
 });
 
-console.log('ok');
+$('#collection-selector').change(function(){
+	var selectedcollection = $('#collection-selector').val();
+	console.log(selectedcollection);
+	$('.colection-container').hide();
+	$('.colection-container.' + selectedcollection).show();
+
+});
+
+$('a[href*="#"]').on('click', function (e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $($(this).attr('href')).offset().top
+	}, 500, 'linear');
+	$('.navbar-toggler').removeClass('collapsed');
+	$('.navbar-toggler').attr('aria-expanded', 'false');
+	$('.navbar-collapse').removeClass('show');
+});
+
+$(window).scroll(function() {    
+	var scroll = $(window).scrollTop();
+	if (scroll >= 420) {
+		$('.navbar').addClass('transparent');
+	} else {
+		$('.navbar').removeClass('transparent');
+	}
+});
+
+$(function(){
+	var formSettings = {
+		singleError : function($field, rules){ 
+			$field.closest('.form-group').removeClass('valid').addClass('error');
+			$('.text-danger').fadeIn();
+		},
+		singleSuccess : function($field, rules){ 
+			$field.closest('.form-group').removeClass('error').addClass('valid');
+			$('.text-danger').fadeOut();
+		},
+		overallSuccess : function(){
+			var form    	= $('#contactForm'),
+				nombre		= form.find( "input[name='nombre']").val(),
+				email		= form.find( "input[name='correo']").val(),
+				telefono	= form.find( "input[name='telefono']").val(),
+				comentario	= form.find( "textarea[name='mensaje']").val(),
+				_token		= form.find( "input[name='_token']").val(),
+				action		= form.attr( "action"),
+				url			= action;
+
+			var posting = $.post(
+				url, { nombre: nombre, telefono: telefono, email: email, _token: _token, comentario: comentario }
+			);
+			posting.done(function( data ){
+				$('#contactForm')[0].reset();
+				$('.sent_mail_alert').fadeIn().delay(3000).fadeOut();
+				console.log('email sent! \n' + data );
+			});
+		},
+		overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
+			autoDetect : true, debug : true
+		};
+	var $validate = $('#contactForm').validate(formSettings).data('validate');
+});
 
 

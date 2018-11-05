@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-	<div class="container-fluid">
+	<div class="container-fluid" id="inicio">
 		<div class="row">
 			<div class="main-banner">
 				<img src="{{ url('images/logo-kin.svg') }}">
@@ -32,6 +32,15 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nihil eos accusantium, aut saepe incidunt blanditiis placeat, perferendis tenetur vitae veniam quos, neque repellendus ut eius odio, obcaecati sunt impedit!</p>
 							</div>
 						</div>
+
+						<div class="item">
+							<div class="image-container"><img src="{{ url('images/kin-banner-stand-top.png') }}"></div>
+							<div class="info">
+								<h2 class="title">LOREM IPSUM</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut fugiat, eveniet, perferendis quis ea obcaecati dolorem optio temporibus, totam tenetur ipsa asperiores voluptatem qui sit nulla quia. Nobis, id quos.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nihil eos accusantium, aut saepe incidunt blanditiis placeat, perferendis tenetur vitae veniam quos, neque repellendus ut eius odio, obcaecati sunt impedit!</p>
+							</div>
+						</div>
 					</div>
 
 				</div>
@@ -39,10 +48,10 @@
 		</div>
 	</div>
 
-	<div class="container-fluid back-print">
+	<div class="container-fluid back-print" id="productos">
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
-				<h2 class="title">PRODUCTOS</h2>
+				<h2 class="title m-bottom-40">PRODUCTOS</h2>
 				<div class="products-container">
 					<div class="item"><img src="{{ url('images/cabo-shelf-a.png') }}" alt="cabo shelf"></div>
 					<div class="item"><img src="{{ url('images/canvas-head-board.png') }}" alt="canvas head board"></div>
@@ -58,25 +67,27 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="colecciones">
 		<div class="row">
 			<div class="col-xs-12 col-md-12 m-top-30 text-center">
 				<h2 class="title">COLECCIONES</h2>
 				<div class="selector-container">
 					<select name="collection-selector" id="collection-selector">
-						<option value="san-miguel">San Miguel</option>
+						<option value="sanmiguel">San Miguel</option>
 						<option value="tulum">Tulum</option>
 						<option value="xo">XO</option>
 					</select>
 				</div>
 				<div class="colection-container sanmiguel"></div>
+				<div class="colection-container tulum"></div>
+				<div class="colection-container xo"></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-10 ml-auto mr-auto image-container m-top-60 m-bottom-60"><img class="img-100" src="{{ url('images/kin-banner-stand-top.png') }}"></div>
+			<div class="col-xs-12 col-md-10 col-lg-8 ml-auto mr-auto image-container m-top-60 m-bottom-60"><img class="img-100" src="{{ url('images/kin-banner-stand-top.png') }}"></div>
 		</div>
 	</div>
 @stop

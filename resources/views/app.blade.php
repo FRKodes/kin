@@ -11,7 +11,7 @@
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/slick.js"></script>
-		{{-- <script src="js/validate.js"></script> --}}
+		<script src="js/validate.js"></script>
 		<script src="{{ url('js/app.js') }}"></script>
 	</body>
 </html>

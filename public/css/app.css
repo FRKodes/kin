@@ -10506,16 +10506,33 @@ a.text-dark:focus {
   margin-bottom: 60px;
 }
 
+.m-bottom-40 {
+  margin-bottom: 40px;
+}
+
 .img-100 {
   width: 100%;
   height: auto;
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 .fixed-top {
   position: fixed;
   width: 100%;
   z-index: 1000;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.fixed-top.transparent {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 
 body {
@@ -10547,6 +10564,10 @@ body {
 
 .navbar.bg-dark {
   background-color: black !important;
+}
+
+.navbar-nav {
+  text-align: center;
 }
 
 .navbar-brand {
@@ -10693,11 +10714,13 @@ h3 {
 .colection-container.tulum {
   background: url(/images/banners-kin-coleccion-tulum.png) no-repeat center center;
   background-size: cover;
+  display: none;
 }
 
 .colection-container.xo {
   background: url(/images/banners-kin-coleccion-xo.png) no-repeat center center;
   background-size: cover;
+  display: none;
 }
 
 .selector-container {
@@ -10709,9 +10732,32 @@ footer {
   padding: 30px 0;
 }
 
+#contactForm {
+  position: relative;
+}
+
+.form-group.error .form-control {
+  border: 1px solid red;
+  background: rgba(255, 0, 0, 0.2);
+}
+
 .form-control {
   border-radius: 0;
   border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.sent_mail_alert {
+  background: rgba(243, 160, 84, 0.95);
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  position: absolute;
+  top: 200px;
+  display: none;
 }
 
 .kin-btn {
@@ -10719,6 +10765,10 @@ footer {
   border-radius: 0;
   border: none;
   display: inline-block;
+}
+
+.kin-btn:hover {
+  background: #f1933c;
 }
 
 ul.shop {
@@ -10775,6 +10825,12 @@ ul.social li img {
 }
 
 @media screen and (min-width: 768px) {
+  .ig-item {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .ig-item {
     height: 210px;
   }
