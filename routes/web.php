@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::post('sendmail', 'MailController@send');
+
+Route::get('mail/send', 'MailController@send');
