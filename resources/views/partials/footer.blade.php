@@ -40,7 +40,8 @@
 		@foreach($imgs as $key => $image)
 			<?php if($count == 4) break; ?>
 			<div class="col-xs-12 col-sm-6 col-md-3 ig-item">
-				<img class="img-100" src="{{ $image->images->standard_resolution->url }}" alt="">
+				<div class="inner" style="background: transparent url({{ $image->images->standard_resolution->url }}) no-repeat center center;"></div>
+				{{-- <img class="img-100" src="{{ $image->images->standard_resolution->url }}" alt=""> --}}
 			</div>
 			<?php $count++; ?>
 		@endforeach
