@@ -15,7 +15,7 @@
 		<header>@include('partials.nav')</header>
 		<section>@yield('content')</section>
 		<footer>@include('partials.footer')</footer>
-		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="//code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/slick.js"></script>
 		<script src="js/validate.js"></script>

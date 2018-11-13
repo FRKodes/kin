@@ -11,7 +11,17 @@
 |
 */
 
+Route::get('/clear', function() {
+    
+	Artisan::call('config:cache');
+	Artisan::call('config:clear');
+	Artisan::call('cache:clear');
+
+    return 'Cache is cleared';
+});
+
 Route::get('/', 'PagesController@index');
 Route::post('sendmail', 'MailController@send');
+
 
 Route::get('mail/send', 'MailController@send');
